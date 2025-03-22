@@ -84,7 +84,7 @@ export default function AddFood() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ _id: selectedFoodId }),
+        body: JSON.stringify({ id: selectedFoodId }),
       });
 
       if (response.ok) {
@@ -113,25 +113,25 @@ export default function AddFood() {
           placeholder="Food Description"
           value={foodDescription}
           onChange={(e) => setFoodDescription(e.target.value)}
+          className="Inputs"
         />
         <input
-          type="number"
+          type="text"
           placeholder="Quantity"
           value={quantity}
           onChange={(e) => setQuantity(e.target.value)}
+          className="Inputs"
         />
         <button onClick={handleSave}>Save</button>
       </div>
 
       <h3>Food List</h3>
-      <table border="1">
+      <table className="table table-bordered">
         <thead>
-          <tr>
             <th>Select</th>
             <th>Description</th>
             <th>Quantity</th>
             <th>Posted On</th>
-          </tr>
         </thead>
         <tbody>
           {foodList.map((food) => (

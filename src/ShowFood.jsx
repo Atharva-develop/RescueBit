@@ -18,8 +18,9 @@ const ShowFood = () => {
   }, []);
 
   return (
-    <div className="card">
+    <>
       <h2>Available Food</h2>
+    <div className="tableCard">
       {loading ? (
         <p>Loading...</p>
       ) : foodList.length === 0 ? (
@@ -27,30 +28,44 @@ const ShowFood = () => {
       ) : (
         <table className="table">
           <thead>
-            <tr>
-              <th>Posted On</th>
+              <th>Posted On 🕰️</th>
               <th>Food Description</th>
               <th>Quantity</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Phone No.</th>
-            </tr>
+              <th>Phone No. ☎️</th>
+              <th>Address 📍</th>
           </thead>
           <tbody>
-            {foodList.map((food, index) => (
-              <tr key={index}>
-                <td>{new Date(food.postedOn).toLocaleString()}</td>
-                <td>{food.foodDescription}</td>
-                <td>{food.quantity}</td>
-                <td>{food.name}</td>
-                <td>{food.email}</td>
-                <td>{food.phone}</td>
-              </tr>
-            ))}
+            {foodList.map((food, index) => {
+              const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(food.address)}`;
+              const whatsappLink = `https://wa.me/${food.phone.replace(/\D/g, "")}`; // Remove non-numeric chars
+
+              return (
+                <tr key={index}>
+                  <td>{new Date(food.postedOn).toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })}</td>
+                  <td>{food.foodDescription}</td>
+                  <td>{food.quantity}</td>
+                  <td>{food.name}</td>
+                  <td>{food.email}</td>
+                  <td>
+                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                      {food.phone} 
+                    </a>
+                  </td>
+                  <td>
+                    <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
+                      {food.address} 
+                    </a>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       )}
     </div>
+    </>
   );
 };
 

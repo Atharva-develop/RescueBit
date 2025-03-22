@@ -11,6 +11,39 @@ body {
   height: 100vh;
 }
 
+.logo{
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  color: white;
+}
+
+.name{
+  position: absolute;
+  top: 25px;
+  left: 120px;
+  color: whitesmoke;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logout-btn{
+  position: absolute; 
+  top: 10px;
+  right: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
 /* Centered Container */
 .container {
   display: flex;
@@ -30,6 +63,67 @@ body {
   max-width: 450px; /* Increased width */
 }
 
+/* ShowFood.css */
+.tableCard {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table thead{
+  background-color: #1f1c2c;
+  color: white;
+}
+
+.table th, .table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table th {
+  color: white;
+}
+
+
+.table tr:hover {
+  background-color: #f1f1f1;
+  color: #1f1c2c;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(188, 202, 242);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .table {
+      font-size: 14px;
+  }
+  
+  .table th, .table td {
+      padding: 8px;
+  }
+}
+
+
 /* Card Styling (Glassmorphism) */
 .card {
   background: rgba(255, 255, 255, 0.1);
@@ -47,9 +141,6 @@ body {
   justify-content: center;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
 
 /* Heading */
 h2 {
@@ -72,11 +163,13 @@ h2 {
   margin-bottom: 15px; /* Better spacing */
 }
 
-.loginInput::placeholder {
-  color: gray;
+.Inputs::placeholder {
+  color: lightgray; 
+  font-style: italic; 
+  opacity: 1; 
 }
 
-.loginInput:focus {
+.Inputs:focus {
   background: rgba(255, 255, 255, 0.3);
   border: 1px solid white;
 }
@@ -90,15 +183,11 @@ h2 {
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-}
-
-.btn-primary {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: white;
   width: 100%;
 }
 
-.btn-primary:hover {
+.btn:hover {
   background: linear-gradient(135deg, #2575fc, #6a11cb);
   transform: scale(1.05);
 }

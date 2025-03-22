@@ -4,7 +4,7 @@ import SignUpForm from "./SignUpForm.jsx";
 import AddFood from "./AddFood.jsx";
 import ShowFood from "./ShowFood.jsx"; // Import new component
 import "./App.css";
-
+import logo from './assets/logo.png';
 const App = () => {
   const [isSignUp, setIsSignUp] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -38,11 +38,13 @@ const App = () => {
   };
 
   return (
+    <>
+     <img src={logo} alt="logo" className="logo"/> <h3 className="name">RescueBite</h3>
     <div className="container mt-5">
       {isLoggedIn ? (
         <>
-          <button onClick={handleLogout} className="btn btn-danger mb-3">
-            Logout
+          <button onClick={handleLogout} className="btn-danger mb-3 logout-btn">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>  Log out
           </button>
           {loggedInType === "NGO" ? <ShowFood /> : <AddFood />}
         </>
@@ -55,6 +57,7 @@ const App = () => {
         />
       )}
     </div>
+    </>
   );
 };
 

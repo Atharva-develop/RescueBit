@@ -61,10 +61,10 @@ function LoginForm({ onSwitchToSignUp, onLoginSuccess }) {
                         required
                     />
                 </div>
-                <button type="submit" className="btn btn-primary w-100">Login</button>
+                <button type="submit" className="btn btn-primary w-100"><i class="fa-solid fa-right-to-bracket"></i> Log in</button>
             </form>
             <div className="text-center mt-3">
-                <button className="btn btn-link" onClick={onSwitchToSignUp}>Sign Up</button>
+                <button className="btn-link" onClick={onSwitchToSignUp}><i class="fa-solid fa-right-to-bracket"></i> Sign Up</button>
             </div>
 
             {error && <div className="alert alert-danger mt-3">{error}</div>}

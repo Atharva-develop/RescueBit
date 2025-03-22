@@ -101,13 +101,13 @@ function SignUpForm({ onSwitchToLogin }) {
                         onChange={(e) => setSignUpData({ ...signUpData, type: e.target.value })}
                         required
                     >
-                        <option value="NGO">NGO</option>
-                        <option value="Restaurant">Restaurant</option>
+                        <option value="NGO" className='Inputs'>NGO</option>
+                        <option value="Restaurant" className='Inputs'>Restaurant</option>
                     </select>
                 </div>
-                <button type="submit" className="btn btn-success w-100">Register</button>
+                <button type="submit" className="btn btn-success w-100"><i class="fa-solid fa-right-to-bracket"></i> Register</button>
                 <div className="text-center mt-3">
-                    <button className="btn btn-link" onClick={onSwitchToLogin}>Back to Login</button>
+                    <button className="btn-link" onClick={onSwitchToLogin}>Back to Login</button>
                 </div>
             </form>
 
