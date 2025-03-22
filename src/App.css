@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Centered Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 450px; /* Increased width */
+}
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 450px; /* Increased width */
+}
+
+/* Card Styling (Glassmorphism) */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px; /* More padding */
+  border-radius: 20px; /* Increased border-radius */
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 600px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Form Inputs */
+.Inputs {
+  width: 500px;
+  height: 50px; /* Bigger inputs */
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 18px;
+  outline: none;
+  margin-bottom: 15px; /* Better spacing */
+}
+
+.loginInput::placeholder {
+  color: gray;
+}
+
+.loginInput:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
+}
+
+/* Buttons */
+.btn {
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+/* Sign-Up Button */
+.btn-link {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 15px; /* Better spacing */
+  display: block;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Alerts */
+.alert {
+  padding: 14px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.alert-danger {
+  background: rgba(255, 0, 0, 0.2);
+  color: white;
+  border-left: 6px solid red;
+}
+
+.alert-success {
+  background: rgba(0, 255, 0, 0.2);
+  color: white;
+  border-left: 6px solid limegreen;
+}
+
+/* Smooth Transitions */
+*, *::before, *::after {
+  transition: all 0.3s ease-in-out;
+}
+
+
