@@ -56,6 +56,9 @@ const App = () => {
           onLoginSuccess={handleLoginSuccess}
         />
       )}
+  <footer className="footer">
+    <h3 className="footer"><i>Website   developed   by   Atharva   Sharma   from   Jamna   Vidyapeeth.</i></h3>
+  </footer>
     </div>
     </>
   );
