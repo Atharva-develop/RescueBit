@@ -5,6 +5,7 @@ import AddFood from "./AddFood.jsx";
 import ShowFood from "./ShowFood.jsx"; // Import new component
 import "./App.css";
 import logo from './assets/logo.png';
+import schoolLogo from './assets/schoolLogo.png';
 const App = () => {
   const [isSignUp, setIsSignUp] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -57,7 +58,7 @@ const App = () => {
         />
       )}
   <footer className="footer">
-    <h3 className="footer"><i>Website   developed   by   Atharva   Sharma   from   Jamna   Vidyapeeth.</i></h3>
+    <h3 className="footer"><i>Website   developed   by   Atharva   Sharma   from   Jamna   Vidyapeeth  <img src={schoolLogo} alt="logo" className="schoolLogo"/></i></h3>
   </footer>
     </div>
     </>

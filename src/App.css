@@ -48,6 +48,15 @@ footer{
   font-family: 'Monoton', cursive;
 }
 
+.schoolLogo{
+  position: absolute;
+  top: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+}
+
 .logout-btn{
   position: absolute; 
   top: 10px;
